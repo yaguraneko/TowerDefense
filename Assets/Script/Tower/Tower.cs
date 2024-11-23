@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     private Transform target;
     public float range = 2f;
     public Transform partToRotate;
+    private float turnSpeed = 7f;
 
     public string enemyTag = "Enemy";
 
@@ -27,7 +28,7 @@ public class Tower : MonoBehaviour
         }
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = lookRotation.eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 

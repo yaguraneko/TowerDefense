@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5756488767697782752}
   - component: {fileID: 5754651552667771203}
   - component: {fileID: 6096865085291261706}
-  - component: {fileID: 7045580460082667539}
+  - component: {fileID: 6895519774492778562}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -109,7 +109,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &7045580460082667539
+--- !u!114 &6895519774492778562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3032020277859798481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4407378e35cb13445aa5dac286bb0abb, type: 3}
+  m_Script: {fileID: 11500000, guid: dcbe5e9d4e1d95f45b824f0c7756fbb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
@@ -185,13 +185,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8397992617874791784}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.31200004, y: 0.11529993, z: 0.009000003}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.44}
   m_LocalScale: {x: 0.23000005, y: 0.49999994, z: 0.23}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 281315206702329703}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!33 &7598863620490554024
 MeshFilter:
   m_ObjectHideFlags: 0
