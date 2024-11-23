@@ -5744,7 +5744,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -8940,7 +8940,7 @@ PrefabInstance:
     - target: {fileID: 2382242547827515109, guid: 8f793fbb59f6cb74fa4e63967879e279,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.5
+      value: 18.35
       objectReference: {fileID: 0}
     - target: {fileID: 2382242547827515109, guid: 8f793fbb59f6cb74fa4e63967879e279,
         type: 3}
