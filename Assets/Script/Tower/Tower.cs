@@ -11,6 +11,12 @@ public class Tower : MonoBehaviour
     public Transform partToRotate;
     private float turnSpeed = 7f;
 
+    public float fireRate = 1f;
+    private float fireCountDown;
+
+    public GameObject projectilPrefab;
+    public Transform firePoint;
+
     public string enemyTag = "Enemy";
 
     // Start is called before the first frame update
@@ -30,6 +36,14 @@ public class Tower : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if(fireCountDown <= 0f)
+        {
+            Shoot();
+
+            fireCountDown = 1/ fireRate;
+        }
+        fireCountDown -= Time.deltaTime;
     }
 
     void OnDrawGizmosSelected()
@@ -60,4 +74,16 @@ public class Tower : MonoBehaviour
             target = null;
         }
     }
+
+    void Shoot()
+    {
+        GameObject projectilGO = Instantiate(projectilPrefab, firePoint.position,firePoint.rotation);
+        Projectil projectil = projectilGO.GetComponent<Projectil>();
+
+        if(projectil != null)
+        {
+            projectil.seek(target);
+        }
+    }
+
 }

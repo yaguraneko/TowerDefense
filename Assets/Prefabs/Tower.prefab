@@ -125,6 +125,10 @@ MonoBehaviour:
   towerType: 0
   range: 2
   partToRotate: {fileID: 281315206702329703}
+  fireRate: 1
+  projectilPrefab: {fileID: 3702595689925650460, guid: 746b7228369486e4f8b6c896f4ba97ae,
+    type: 3}
+  firePoint: {fileID: 668151001214587230}
   enemyTag: Enemy
 --- !u!1 &6535110501159400511
 GameObject:
@@ -155,8 +159,40 @@ Transform:
   m_LocalScale: {x: 1.25, y: 1.7241379, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 668151001214587230}
   - {fileID: 2805165250160669187}
   m_Father: {fileID: 1361412037547586000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7169879685777764537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668151001214587230}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668151001214587230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169879685777764537}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0058000027, z: 1.0888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 281315206702329703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8397992617874791784
 GameObject:
