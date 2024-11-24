@@ -7,7 +7,7 @@ public class Tower : MonoBehaviour
     public int damage;
     public int towerType;
     private Transform target;
-    public float range = 2f;
+    public float range = 17.5f;
     public Transform partToRotate;
     private float turnSpeed = 7f;
 
@@ -15,12 +15,11 @@ public class Tower : MonoBehaviour
     private float fireCountDown;
 
     public GameObject projectilPrefab;
+
     public Transform firePoint;
-    public Vector3 fPPosition;
-    public Quaternion fPRotation;
 
 
-    public string enemyTag = "Enemy";
+    public string enemyTag = "enemy";
 
     // Start is called before the first frame update
     void Start()
@@ -81,8 +80,6 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
-        fPPosition = firePoint.position;
-        fPRotation = firePoint.rotation;
         GameObject projectilGO = Instantiate(projectilPrefab, firePoint.position,firePoint.rotation);
         Projectil projectil = projectilGO.GetComponent<Projectil>();
 
