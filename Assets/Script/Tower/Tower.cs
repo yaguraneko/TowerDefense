@@ -16,13 +16,17 @@ public class Tower : MonoBehaviour
 
     public GameObject projectilPrefab;
     public Transform firePoint;
+    public Vector3 fPPosition;
+    public Quaternion fPRotation;
+
 
     public string enemyTag = "Enemy";
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f , 0.5f);        
+        InvokeRepeating("UpdateTarget", 0f , 0.5f);
+               
     }
 
     // Update is called once per frame
@@ -53,7 +57,7 @@ public class Tower : MonoBehaviour
     void UpdateTarget()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDistance = range * 2;
+        float shortestDistance = range * 4;
         GameObject nearestEnemy = null;
         foreach(GameObject enemy in enemys)
         {
@@ -77,6 +81,8 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
+        fPPosition = firePoint.position;
+        fPRotation = firePoint.rotation;
         GameObject projectilGO = Instantiate(projectilPrefab, firePoint.position,firePoint.rotation);
         Projectil projectil = projectilGO.GetComponent<Projectil>();
 

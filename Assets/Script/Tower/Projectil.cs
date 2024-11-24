@@ -6,7 +6,8 @@ public class Projectil : MonoBehaviour
 {
     private Transform target;
 
-    public float speed = 70f;
+    public float speed = 0.1f;
+    public GameObject impactEffect;
     
     public void seek(Transform _target)
     {
@@ -43,6 +44,8 @@ public class Projectil : MonoBehaviour
 
     void HitTarget()
     {
-        Debug.Log("La balle a atteint sa cible");
+        GameObject effectIns =  (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectIns,2f);
+        Destroy(gameObject);
     }
 }
