@@ -617,7 +617,7 @@ MonoBehaviour:
   towerType: 0
   range: 28
   partToRotate: {fileID: 7022527797565461942}
-  fireRate: 1
+  fireRate: 0.5
   projectilPrefab: {fileID: 3702595689925650460, guid: 746b7228369486e4f8b6c896f4ba97ae,
     type: 3}
   firePoint: {fileID: 4917174246064423614}

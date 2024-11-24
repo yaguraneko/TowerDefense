@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
       propertyPath: m_Name
-      value: Tower Base
+      value: Arrow Tower
       objectReference: {fileID: 0}
     - target: {fileID: 4407187375235809858, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
@@ -197,7 +197,7 @@ MonoBehaviour:
   range: 17.5
   partToRotate: {fileID: 4448030316348449600}
   fireRate: 1
-  projectilPrefab: {fileID: 919132149155446097, guid: 83ca22f8af7ca274fb4fb2387ab5ee1f,
+  projectilPrefab: {fileID: 1911690754149493473, guid: c7fc369d835ac1b4cba962504438660e,
     type: 3}
   firePoint: {fileID: 704653674210215625}
   enemyTag: Enemy
