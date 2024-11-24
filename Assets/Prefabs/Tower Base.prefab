@@ -74,7 +74,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.15
+      value: -26.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.554452
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
@@ -121,11 +121,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7901965365810808197, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 625c3e71a362f9d408a4f46eb3f7f6cb, type: 2}
+    - target: {fileID: -7849268929617644440, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 625c3e71a362f9d408a4f46eb3f7f6cb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d2f3375bcb62db44b913cf3b3fdfad0, type: 2}
+    - target: {fileID: -7202464317774104332, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 625c3e71a362f9d408a4f46eb3f7f6cb, type: 2}
+    - target: {fileID: -3477821731311062464, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 625c3e71a362f9d408a4f46eb3f7f6cb, type: 2}
     - target: {fileID: 919132149155446097, guid: 637441b34720c594f816628d77238dbf,
         type: 3}
       propertyPath: m_Name
       value: Tower Base
       objectReference: {fileID: 0}
+    - target: {fileID: 4407187375235809858, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d16103a23780ec84ca812c2dde0b1dc7, type: 2}
+    - target: {fileID: 8736054615233459941, guid: 637441b34720c594f816628d77238dbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 625c3e71a362f9d408a4f46eb3f7f6cb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -165,8 +200,6 @@ MonoBehaviour:
   projectilPrefab: {fileID: 919132149155446097, guid: 83ca22f8af7ca274fb4fb2387ab5ee1f,
     type: 3}
   firePoint: {fileID: 704653674210215625}
-  fPPosition: {x: 0, y: 0, z: 0}
-  fPRotation: {x: 0, y: 0, z: 0, w: 0}
   enemyTag: Enemy
 --- !u!4 &6857614402673025990 stripped
 Transform:
@@ -257,6 +290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 8244193131400621068, guid: 6122c9a0796135245b0b9b4b4ea76876,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23e7d4e2510218f4d8ae8814fdc72988, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
