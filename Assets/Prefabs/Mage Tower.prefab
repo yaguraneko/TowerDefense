@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 6671169150334823222}
   - component: {fileID: 4313217596318725169}
   - component: {fileID: 5864560308505006662}
+  - component: {fileID: 2233874069698451832}
   m_Layer: 0
   m_Name: Mage Tower
   m_TagString: Untagged
@@ -588,6 +589,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2233874069698451832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8101764265844013717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbe5e9d4e1d95f45b824f0c7756fbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  towerType: 0
+  range: 17.5
+  partToRotate: {fileID: 0}
+  fireRate: 1
+  projectilPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  enemyTag: enemy
 --- !u!1001 &2259721594493480491
 PrefabInstance:
   m_ObjectHideFlags: 0

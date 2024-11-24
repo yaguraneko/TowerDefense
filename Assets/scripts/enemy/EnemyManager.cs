@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject EnemyPrefab; // The enemy prefab to spawn
     [SerializeField] Transform SpawnPoint;
     public int EnemyCount, wave;
+    public float speed=8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,10 @@ public class EnemyManager : MonoBehaviour
             GameObject newEnemy = Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity);
             newEnemy.GetComponent<EnemyScript>().Points = Points;
 
-            float threshold = 1f / wave + 0.05f; // Calculate threshold based on wave
+            float threshold = (1f / wave + 0.05f)* Time.deltaTime; // Calculate threshold based on wave
             // Use the threshold to determine speed and health
-            newEnemy.GetComponent<EnemyScript>().speed = Random.Range(0f, 1f) > threshold ? 2 : 1;
-            newEnemy.GetComponent<EnemyScript>().HealthPoint = Random.Range(0f, 1f) > threshold ? 2 : 1;
+            newEnemy.GetComponent<EnemyScript>().speed =speed; //Random.Range(0f, 1f) > threshold ? 10 : 5;
+            newEnemy.GetComponent<EnemyScript>().HealthPoint =3; //Random.Range(0f, 1f) > threshold ? 2 : 1;
 
             // Log for debugging
             Debug.Log($"wave: {wave}, Threshold: {threshold}");

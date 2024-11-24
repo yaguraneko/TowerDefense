@@ -28,8 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 4917174246064423614}
+  m_Children: []
   m_Father: {fileID: 7022527797565461942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005633711527287621
@@ -172,12 +171,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981022724702978422}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.24, z: 1.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 2.9, z: 2.85}
+  m_LocalScale: {x: 1.2536798, y: 1.2470418, z: 1.2536765}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8495088121787234572}
+  m_Father: {fileID: 7933631036854591301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4631535609143558679
 GameObject:
@@ -616,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   towerType: 0
-  range: 17.5
+  range: 28
   partToRotate: {fileID: 7022527797565461942}
   fireRate: 1
   projectilPrefab: {fileID: 3702595689925650460, guid: 746b7228369486e4f8b6c896f4ba97ae,
@@ -796,7 +795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41f77467710db4f4da98706e577d3855,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 4917174246064423614}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41f77467710db4f4da98706e577d3855, type: 3}
 --- !u!4 &7933631036854591301 stripped
