@@ -7,11 +7,14 @@ public class EnemyScript : MonoBehaviour
     public Transform[] Points; // Array of waypoints for the enemy to follow
     public float speed = 2f;   // Movement speed
     public float HealthPoint = 1;
+    [SerializeField] GameObject shield, SlimeDeath, FastSlimDeath;
     int pointIndex = 0;                  // Current waypoint index
 
     // Update is called once per frame
     void Start()
     {
+        if (HealthPoint == 2)
+            shield.SetActive(true);
         Debug.Log(speed);
         Debug.Log(HealthPoint);
     }
@@ -30,4 +33,24 @@ public class EnemyScript : MonoBehaviour
             // Add logic here for when the enemy has reached the end
             Debug.Log("Enemy reached the final point!");
     }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger detected with: " + other.name); // Log for debugging
+        if (other.CompareTag("arrow"))
+        {
+            if (HealthPoint == 2)
+                Destroy(shield);
+            else
+            {
+                CallDeath();
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    void CallDeath()
+    {
+         GameObject newEnemy = Instantiate(speed == 6 ? FastSlimDeath : SlimeDeath, transform.position, transform.rotation);
+    }
+
 }
