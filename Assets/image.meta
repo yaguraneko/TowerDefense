@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/image.meta
 guid: c6a67b3eed882d348b3057de2fc16810
+=======
+guid: f3893444263b17a4e87a70473e3bd76c
+>>>>>>> Stashed changes:Assets/Texture/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
