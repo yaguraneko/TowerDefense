@@ -7367,6 +7367,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1186780629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205711406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8852050666299051024, guid: d55b44566dcf3ba4d9efad278eb5b7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077361926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1205711410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205711406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c1aa80b2861b54aa8f6998acc45a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points:
+  - {fileID: 445263598}
+  - {fileID: 1531517639}
+  - {fileID: 1304157517}
+  - {fileID: 1692994505}
+  - {fileID: 732775936}
+  - {fileID: 309363336}
+  - {fileID: 1056104761}
+  - {fileID: 361451523}
+  - {fileID: 1563203864}
+  - {fileID: 1882952364}
+  Slime: {fileID: 607069691486713510, guid: 53a3deb28ec0010449047c582987394d, type: 3}
+  FastSlime: {fileID: 607069691486713510, guid: 3dd4ed2f2f27783429f28186d66a923b,
+    type: 3}
+  MinSpeed: 5
+  MaxSpeed: 10
+  MaxHealth: 5
 --- !u!1001 &1251454386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13332,10 +13367,15 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8813289290365188095, guid: d55b44566dcf3ba4d9efad278eb5b7a5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8852050666299051024, guid: d55b44566dcf3ba4d9efad278eb5b7a5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1205711410}
   m_SourcePrefab: {fileID: 100100000, guid: d55b44566dcf3ba4d9efad278eb5b7a5, type: 3}
 --- !u!1 &2139589463
 GameObject:
