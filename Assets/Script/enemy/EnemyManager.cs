@@ -20,8 +20,7 @@ public class EnemyManager : MonoBehaviour
     private void NextWave()
     {
         // Calculate the number of enemies for the wave
-        int enemyCount = GlobalData.wave <= 10 ? (10 * GlobalData.wave) : Mathf.RoundToInt(10 * Mathf.Pow(2, GlobalData.wave));
-        
+        int enemyCount = GlobalData.wave <= 10 ? (10 * GlobalData.wave) : (int)Mathf.Pow(GlobalData.wave, 2);
         StartCoroutine(SpawnEnemies(enemyCount));
     }
 

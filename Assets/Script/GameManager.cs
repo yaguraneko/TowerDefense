@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
@@ -47,5 +48,6 @@ public class GameManager : MonoBehaviour
         GlobalData.lose = false;
         hleath.SetText("200");
         Money.SetText("$100");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

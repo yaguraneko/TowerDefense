@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField] ParticleSystem ShiledVFX;
-    [SerializeField] AudioClip ShiledBreak;
+    [SerializeField] AudioClip ShiledBreak, DeathSFX;
     [SerializeField] GameObject Death;
     [SerializeField] Animator enemyAnim;
     public Transform[] Points; // Array of waypoints for the enemy to follow
@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemyAnim.Play("SlimeJump", 0, Random.Range(0f, 1f));
+        enemyAnim.speed = speed/3;
         GlobalData.AliveSlimes++;
         moeny *= (int)speed * HealthPoint;
         if (HealthPoint > 1)
@@ -79,6 +80,7 @@ public class EnemyScript : MonoBehaviour
         HealthPoint -= damage;
         if (HealthPoint < 1)
         {
+            GlobalData.AudioManager(DeathSFX, transform.position, .5f);
             Destroy(Instantiate(Death, transform.position, transform.rotation), 4);
             GlobalData.Money += moeny;
             GlobalData.MoneyText.SetText($"{GlobalData.Money}$");

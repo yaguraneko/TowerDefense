@@ -5283,6 +5283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShiledVFX: {fileID: 3508404637032050846}
   ShiledBreak: {fileID: 8300000, guid: adb5a6fda899ca243b6c6d4d2df4287f, type: 3}
+  DeathSFX: {fileID: 8300000, guid: 755aef912892a0a459fd8457b09b5bd1, type: 3}
   Death: {fileID: 3955187017186762160, guid: f8f0f82db3b55cf4ca0fd8d793868690, type: 3}
   enemyAnim: {fileID: 8968114890939526121}
   Points: []

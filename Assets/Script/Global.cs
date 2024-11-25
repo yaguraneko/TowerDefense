@@ -17,7 +17,7 @@ public static class GlobalData
 
     public static void AudioManager(AudioClip clip, Vector3 pos, float volume=1, float pitch=1, bool loop=false, float spatialBlend=0)
     {
-        if (sfx != null)
+        if (sfx != null || Time.timeScale != 1)
             return;
         GameObject audioSource = new GameObject("AudioSource");
         var sound = audioSource.AddComponent<AudioSource>();
