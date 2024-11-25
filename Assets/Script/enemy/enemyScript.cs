@@ -21,6 +21,8 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
+        if (GlobalData.GameOver.activeSelf)
+            Destroy(gameObject);
         if (pointIndex < Points.Length) // Check if there are remaining waypoints
         {
             // Move towards the current waypoint
@@ -35,6 +37,12 @@ public class EnemyScript : MonoBehaviour
             // Add logic here for when the enemy has reached the end
             GlobalData.AliveSlimes--;
             GlobalData.lose = true;
+            GlobalData.PlayerHP--;
+            if (GlobalData.PlayerHP < 1)
+            {
+                GlobalData.GameOver.SetActive(true);
+                GlobalData.hleathText.SetText($"{GlobalData.PlayerHP}");
+            }
             Destroy(gameObject);
         }
     }
