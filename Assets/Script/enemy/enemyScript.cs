@@ -5,18 +5,23 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField] ParticleSystem ShiledVFX;
+    [SerializeField] AudioClip ShiledBreak;
     [SerializeField] GameObject Death;
+    [SerializeField] Animator enemyAnim;
     public Transform[] Points; // Array of waypoints for the enemy to follow
     public float speed = 2f;   // Movement speed
     public int HealthPoint;
-    int pointIndex = 1, moeny = 25;
+    int pointIndex = 1, moeny = 1;
     
     void Start()
     {
+        enemyAnim.Play("SlimeJump", 0, Random.Range(0f, 1f));
         GlobalData.AliveSlimes++;
         moeny *= (int)speed * HealthPoint;
         if (HealthPoint > 1)
             SetBurstCount(HealthPoint);
+        else
+            Destroy(ShiledVFX);
     }
 
     void Update()
@@ -59,7 +64,6 @@ public class EnemyScript : MonoBehaviour
 
         ParticleSystem.Burst[] bursts = new ParticleSystem.Burst[1]; // Create a new array with 1 burst
         bursts[0] = burst; // Assign the new burst to the array
-
         emission.SetBursts(bursts); // Set the burst array
         ShiledVFX.Play();  // Ensure it's playing to apply the new burst
     }
@@ -73,7 +77,6 @@ public class EnemyScript : MonoBehaviour
     void AddDamage(int damage)
     {
         HealthPoint -= damage;
-        SetBurstCount(HealthPoint);
         if (HealthPoint < 1)
         {
             Destroy(Instantiate(Death, transform.position, transform.rotation), 4);
@@ -83,6 +86,9 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject);
         }
         else
+        {
             SetBurstCount(HealthPoint);
+            GlobalData.AudioManager(ShiledBreak, transform.position, .1f);
+        }
     }
 }

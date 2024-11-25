@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
     private void NextWave()
     {
         // Calculate the number of enemies for the wave
-        int enemyCount = GlobalData.wave <= 10 ? (200 * GlobalData.wave) : Mathf.RoundToInt(10 * Mathf.Pow(2, GlobalData.wave));
+        int enemyCount = GlobalData.wave <= 10 ? (10 * GlobalData.wave) : Mathf.RoundToInt(10 * Mathf.Pow(2, GlobalData.wave));
         
         StartCoroutine(SpawnEnemies(enemyCount));
     }
@@ -40,9 +40,8 @@ public class EnemyManager : MonoBehaviour
             newEnemy.GetComponent<EnemyScript>().speed = speed;
             newEnemy.GetComponent<EnemyScript>().HealthPoint = (int)(
                 Random.Range(0f, 1f) > threshold ? Random.Range(MaxHealth/2, MaxHealth) : Random.Range(1, MaxHealth/2));
-
             EnemyCount--;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(Random.Range(.5f/GlobalData.wave, 1.5f/GlobalData.wave));
         }
         GlobalData.AliveSlimes--;
     }
