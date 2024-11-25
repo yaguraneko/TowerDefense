@@ -12,9 +12,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GlobalData.MoneyText = Money;
+        GlobalData.hleathText = hleath;
         GlobalData.GameOver = GameOver;
 
-        SpeedUp.onClick.AddListener(() =>{Time.timeScale = (Time.timeScale == 1) ? 3 : 1;});
+        SpeedUp.onClick.AddListener(() =>{Time.timeScale = (Time.timeScale == 1) ? 5 : 1;});
         StartWave.onClick.AddListener(CallWave);
         ResetBtn.onClick.AddListener(ResetGame);
     }

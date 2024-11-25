@@ -38,11 +38,9 @@ public class EnemyScript : MonoBehaviour
             GlobalData.AliveSlimes--;
             GlobalData.lose = true;
             GlobalData.PlayerHP--;
+            GlobalData.hleathText.SetText($"{GlobalData.PlayerHP}");
             if (GlobalData.PlayerHP < 1)
-            {
                 GlobalData.GameOver.SetActive(true);
-                GlobalData.hleathText.SetText($"{GlobalData.PlayerHP}");
-            }
             Destroy(gameObject);
         }
     }

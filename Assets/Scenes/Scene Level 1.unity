@@ -10907,7 +10907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1547086373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13969,8 +13969,8 @@ MonoBehaviour:
   Slime: {fileID: 607069691486713510, guid: 53a3deb28ec0010449047c582987394d, type: 3}
   FastSlime: {fileID: 607069691486713510, guid: 3dd4ed2f2f27783429f28186d66a923b,
     type: 3}
-  MinSpeed: 3
-  MaxSpeed: 6
+  MinSpeed: 6
+  MaxSpeed: 12
   MaxHealth: 8
 --- !u!4 &1946522318
 Transform:
@@ -14771,7 +14771,7 @@ MonoBehaviour:
   ResetBtn: {fileID: 570290637}
   CurrentWave: {fileID: 589819619}
   Money: {fileID: 1996098673}
-  hleath: {fileID: 0}
+  hleath: {fileID: 112815364}
   GameOver: {fileID: 1547086372}
 --- !u!1001 &2066264470
 PrefabInstance:
