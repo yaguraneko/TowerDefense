@@ -197,7 +197,7 @@ MonoBehaviour:
   range: 17.5
   partToRotate: {fileID: 4448030316348449600}
   fireRate: 1
-  projectilPrefab: {fileID: 919132149155446097, guid: 83ca22f8af7ca274fb4fb2387ab5ee1f,
+  projectilPrefab: {fileID: 4125931258768925623, guid: 5db50ee2bc0f0f7439e7dfd9add482f0,
     type: 3}
   firePoint: {fileID: 704653674210215625}
   enemyTag: Enemy
