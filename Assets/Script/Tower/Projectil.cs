@@ -39,7 +39,7 @@ public class Projectil : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-       // transform.LookAt(target);
+        transform.LookAt(target);
        // transform.position = Vector3.MoveTowards(transform.position, target.position, distanceThisFrame);
        // Debug.Log("Projectile position: " + transform.position + " | Target position: " + target.position); 
         
@@ -47,9 +47,9 @@ public class Projectil : MonoBehaviour
 
     void HitTarget()
     {
-        GameObject effectIns =  (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns,2f);
+       // GameObject effectIns =  (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        //Destroy(effectIns,2f);
         Destroy(gameObject);
-       // Destroy(target);
+        Destroy(target);
     }
 }
