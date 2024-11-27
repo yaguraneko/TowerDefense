@@ -19,27 +19,30 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTowerPrefab;
     public GameObject canonTowerPrefab;
     public GameObject mageTowerPrefab; 
-    private GameObject towerToBuild;
+    private TowersBluePrint towerToBuild;
+   
 
-    public GameObject GetTowerToBuild()
-    {
-        return towerToBuild;
-    }
 
-    public void SetTowerToBuild(GameObject _tower)
+    public bool canBuild { get {return towerToBuild != null;} }
+
+
+    public void SelectTowerToBuild(TowersBluePrint _tower)
     {
         towerToBuild = _tower;
     }
-
-    // Start is called before the first frame update
-    /* void Start()
+    public void BuildTowerOn(TowerBase towerBase)
     {
-        towerToBuild = standardTowerPrefab;
+
+        if (PlayerStats.money < towerToBuild.Cost)
+        {
+            Debug.Log("Pas assez d'argent");
+            return;
+        }
+
+        PlayerStats.money -= towerToBuild.Cost;
+        Debug.Log("Toure achetée il vous reste " + PlayerStats.money);
+        GameObject tower = (GameObject)Instantiate(towerToBuild.prefab, towerBase.transform.position, Quaternion.Euler(-90f, towerBase.transform.rotation.eulerAngles.y, towerBase.transform.rotation.eulerAngles.z));
+        towerBase.tower = tower;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } */
 }
+  

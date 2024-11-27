@@ -7,7 +7,7 @@ public class TowerBase : MonoBehaviour
     private Color baseColor;
     private Renderer crend;
 
-    private GameObject tower;
+    public GameObject tower;
     private BuildManager buildManager;
  
 
@@ -19,6 +19,11 @@ public class TowerBase : MonoBehaviour
        crend= GetComponent<Renderer>();
        baseColor = crend.material.color;
     buildManager = BuildManager.instance;
+    }
+
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position ;
     }
 /*
     // Update is called once per frame
@@ -32,7 +37,7 @@ public class TowerBase : MonoBehaviour
         {
             return;
         }
-        if(buildManager.GetTowerToBuild()== null)
+        if(!buildManager.canBuild)
         {
             return;
         }
@@ -42,10 +47,7 @@ public class TowerBase : MonoBehaviour
         }
 
         //Construir une tourelle.
-        //GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-        GameObject towerToBuild = buildManager.GetTowerToBuild();
-       tower = Instantiate(towerToBuild, transform.position, Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z));
-                // Instantiate(towerToBuild, transform.position, transform.rotation);
+        buildManager.BuildTowerOn(this);
         
     }
     private void OnMouseEnter()
@@ -54,7 +56,7 @@ public class TowerBase : MonoBehaviour
         {
             return;
         }
-        if(buildManager.GetTowerToBuild()== null)
+        if(!buildManager.canBuild)
         {
             return;
         }

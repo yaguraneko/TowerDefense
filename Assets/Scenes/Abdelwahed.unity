@@ -4526,6 +4526,7 @@ GameObject:
   - component: {fileID: 845327156}
   - component: {fileID: 845327155}
   - component: {fileID: 845327158}
+  - component: {fileID: 845327159}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4651,6 +4652,23 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &845327159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845327154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2348a5e84962048a46d4a46336089f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panSpeed: 30
+  panBorder: 10
+  scrollSpeed: 5
+  minY: 20
+  maxY: 60
 --- !u!1001 &845594469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6069,6 +6087,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489767594269792728, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectMageTower
+      objectReference: {fileID: 0}
     - target: {fileID: 2796114139862754218, guid: d79beba973aad5642bb24009cf5f2999,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6169,6 +6192,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3486058447299296365, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectArrowTower
+      objectReference: {fileID: 0}
     - target: {fileID: 6832542346812104794, guid: d79beba973aad5642bb24009cf5f2999,
         type: 3}
       propertyPath: m_text
@@ -6214,6 +6242,11 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278209493
       objectReference: {fileID: 0}
+    - target: {fileID: 8049031415212457165, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCanonTower
+      objectReference: {fileID: 0}
     - target: {fileID: 8149506623098945126, guid: d79beba973aad5642bb24009cf5f2999,
         type: 3}
       propertyPath: m_Name
@@ -6239,6 +6272,61 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: mageTower.Cost
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: ArrowTower.Cost
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: CanonTower.Cost
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: arrowTower.Cost
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: canonTower.Cost
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: mageTower.prefab
+      value: 
+      objectReference: {fileID: 8101764265844013717, guid: 4085d0cb2e55bd840a5a12c5b2ceaba0,
+        type: 3}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: ArrowTower.prefab
+      value: 
+      objectReference: {fileID: 1310774448058921996, guid: 15ec53cba73b56d49bc473196b56e86e,
+        type: 3}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: CanonTower.prefab
+      value: 
+      objectReference: {fileID: 8012481897761291990, guid: 307f825db0b53da498cebe03c0a6ea41,
+        type: 3}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: arrowTower.prefab
+      value: 
+      objectReference: {fileID: 1310774448058921996, guid: 15ec53cba73b56d49bc473196b56e86e,
+        type: 3}
+    - target: {fileID: 8869219379097522443, guid: d79beba973aad5642bb24009cf5f2999,
+        type: 3}
+      propertyPath: canonTower.prefab
+      value: 
+      objectReference: {fileID: 8012481897761291990, guid: 307f825db0b53da498cebe03c0a6ea41,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

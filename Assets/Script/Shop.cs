@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public TowersBluePrint arrowTower;
+    public TowersBluePrint canonTower;
+    public TowersBluePrint mageTower;
     private BuildManager buildManager;
       //Start is called before the first frame update
     void Start()
@@ -14,19 +17,19 @@ public class Shop : MonoBehaviour
     {
         
     }  */
-     public void PurchaseArrowTower()
+     public void SelectArrowTower()
      {
          Debug.Log("Archer Preparé");
-         buildManager.SetTowerToBuild(buildManager.standardTowerPrefab);
+         buildManager.SelectTowerToBuild(arrowTower);
      }
-    public void PurchaseCanonTower()
+    public void SelectCanonTower()
      {
          Debug.Log("canon armé");
-         buildManager.SetTowerToBuild(buildManager.canonTowerPrefab);
+         buildManager.SelectTowerToBuild(canonTower);
      }
-    public void PurchaseMageTower()
+    public void SelectMageTower()
      {
          Debug.Log("magie chargée");
-         buildManager.SetTowerToBuild(buildManager.mageTowerPrefab);
+         buildManager.SelectTowerToBuild(mageTower);
      }
 }
