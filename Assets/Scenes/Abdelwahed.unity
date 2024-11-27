@@ -7956,35 +7956,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2077361926}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205711410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205711406}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c1aa80b2861b54aa8f6998acc45a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Slime: {fileID: 607069691486713510, guid: 53a3deb28ec0010449047c582987394d, type: 3}
-  FastSlime: {fileID: 607069691486713510, guid: 3dd4ed2f2f27783429f28186d66a923b,
-    type: 3}
-  MinSpeed: 5
-  MaxSpeed: 10
-  MaxHealth: 5
 --- !u!114 &1205711413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8002,6 +7973,19 @@ MonoBehaviour:
   SpawnPoint: {fileID: 1768365348}
   wavesCoolDown: 5
   wavesCountDownTimer: {fileID: 1705069581}
+--- !u!114 &1205711416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205711406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5deb3c0301a9e3b419a62b42c9e01d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 200
 --- !u!1001 &1251454386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14096,11 +14080,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8852050666299051024, guid: d55b44566dcf3ba4d9efad278eb5b7a5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1205711410}
+      addedObject: {fileID: 1205711413}
     - targetCorrespondingSourceObject: {fileID: 8852050666299051024, guid: d55b44566dcf3ba4d9efad278eb5b7a5,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1205711413}
+      addedObject: {fileID: 1205711416}
   m_SourcePrefab: {fileID: 100100000, guid: d55b44566dcf3ba4d9efad278eb5b7a5, type: 3}
 --- !u!1 &2117218465
 GameObject:
