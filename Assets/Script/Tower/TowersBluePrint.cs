@@ -6,5 +6,5 @@ using UnityEngine;
 public class TowersBluePrint 
 {
    public GameObject prefab;
-   public int Cost;
+   public int cost;
 }

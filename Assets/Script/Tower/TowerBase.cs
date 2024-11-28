@@ -5,6 +5,7 @@ public class TowerBase : MonoBehaviour
 {
     public Color hoverColor;
     private Color baseColor;
+    public Color notEnoughMoneyColor;
     private Renderer crend;
 
     public GameObject tower;
@@ -60,7 +61,14 @@ public class TowerBase : MonoBehaviour
         {
             return;
         }
-        crend.material.color = hoverColor;
+        if(buildManager.hasMoney)
+        {
+            crend.material.color = hoverColor;
+        }else
+        {
+            crend.material.color = notEnoughMoneyColor;
+            Debug.Log("Pas d'argent");
+        }
     }
     private void OnMouseExit()
     {

@@ -11,7 +11,7 @@ public class Projectil : MonoBehaviour
     
     public void seek(Transform _target)
     {
-        Debug.Log("Seek");
+        
         target = _target;
     }
     // Start is called before the first frame update

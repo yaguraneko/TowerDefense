@@ -13,7 +13,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]    
     private float wavesCoolDown = 5.5f;
 
-    private float countDown = 2f;
+    private float countDown = 6f;
         [SerializeField]    
     private Text wavesCountDownTimer;
 
@@ -33,7 +33,8 @@ public class WaveSpawner : MonoBehaviour
             countDown = wavesCoolDown;
         }
         countDown -= Time.deltaTime;
-        wavesCountDownTimer.text = Mathf.Round(countDown).ToString();
+        
+        wavesCountDownTimer.text = Mathf.Clamp(Mathf.Round(countDown),0f,Mathf.Infinity).ToString();
     } 
 
     IEnumerator SpawnWaves()
